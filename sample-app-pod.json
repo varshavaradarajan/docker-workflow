@@ -1,0 +1,18 @@
+{
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata":{
+        "name": "sample-app",
+        "namespace": "gocd",
+        "labels": {
+            "name": "sample-app"
+        }
+    },
+    "spec": {
+        "containers": [{
+            "name": "sample-app",
+            "image": "varshavs/sample-app:#{tag}",
+            "ports": [{"containerPort": 8080}]
+        }]
+    }
+}
